@@ -642,7 +642,7 @@ class SensorPeak(BinarySensorEntity):
             else:
                 # self._wifree_usage = self._data._telemeter.get('internet').get('wifreeUsage').get('usedUnits')
                 self._wifree_usage = 0
-                self._peak_usage = round(self._data._telemeter.get('internetUsage')[0].get('totalUsage').get('peak'),1)
+                self._peak_usage = round(self._data._telemeter.get('internet').get('peakUsage').get('usedUnits'),1)
                 self._includedvolume_usage = self._peak_usage
                 self._offpeak_usage = round(self._data._telemeter.get('internetUsage')[0].get('totalUsage').get('offPeak'),1)
             
